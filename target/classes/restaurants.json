@@ -1,0 +1,43 @@
+// Takto sa posiela query a treba tam dat uzivatelovu polohu, ktoru si vytiahneme z prehliadaca
+//   {
+//      "userLatitude": 48.875448,
+//         "userLongitude": 21.666845,
+//         "radius": 2,
+//         "tags": []
+//   }
+
+[
+  {
+    "name": "Košice",
+    "gpsLocation": {
+      "latitude": 48.702927,
+      "longitude": 21.259721
+    },
+    "hashTags": [
+      "korcula",
+      "kamiony"
+    ]
+  },
+  {
+    "name": "Vranov - Kondor",
+    "gpsLocation": {
+      "latitude": 48.877321,
+      "longitude": 21.667105
+    },
+    "hashTags": [
+      "korcula",
+      "kamiony"
+    ]
+  },
+  {
+    "name": "Vranov - cintorin",
+    "gpsLocation": {
+      "latitude": 48.877494,
+      "longitude": 21.663124
+    },
+    "hashTags": [
+      "korcula",
+      "kamiony"
+    ]
+  }
+]
