@@ -1,35 +1,4 @@
-package api;/*
-
-/**
- * @author <a href="mailto:mat.per.vt@gmail.com">Matej Perejda</a>
- */
-
-/*@RunWith(SpringRunner.class) // @RunWith(SpringJUnit4ClassRunner.class)
-// @AutoConfigureMockMvc
-*//*
-*/
-/*@SpringApplicationConfiguration(classes = RestaurantApplication.class)
-WebAppConfiguration*//*
-*/
-/*
-@ContextConfiguration // @SpringBootTest*//*
-
-@RunWith(SpringJUnit4ClassRunner.class)
-// @ContextConfiguration(classes=RestaurantApplication.class, loader=SpringApplicationContextLoader.class)
-@SpringApplicationConfiguration(RestaurantApplication.class)
-@IntegrationTest
-@WebIntegrationTest
-public class RestaurantControllerTest {
-
-   @Autowired
-   private MockMvc mockMvc;
-
-   @Test
-   public void test() throws Exception {
-      this.mockMvc.perform()
-   }
-
-}*/
+package api;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -57,6 +26,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * @author <a href="mailto:mat.per.vt@gmail.com">Matej Perejda</a>
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 //@SpringApplicationConfiguration(RestaurantApplication.class)
 @ContextConfiguration(classes = RestaurantApplication.class)
@@ -189,11 +161,11 @@ public class RestaurantControllerTest {
       final String jsonQuery2 = (new JSONObject(query2)).toString();
 
       final MvcResult mvcResult2 = mvc.perform(MockMvcRequestBuilders.post(URL_PATH_PREFIX + "search")
-                                                                    .contentType(MediaType.APPLICATION_JSON)
-                                                                    .content(jsonQuery2)
-                                                                    .accept(contentType))
-                                     .andExpect(status().isOk())
-                                     .andReturn();
+                                                                     .contentType(MediaType.APPLICATION_JSON)
+                                                                     .content(jsonQuery2)
+                                                                     .accept(contentType))
+                                      .andExpect(status().isOk())
+                                      .andReturn();
       String content2 = mvcResult2.getResponse().getContentAsString();
       Assert.assertEquals(stringToList(content2).size(), 3);
    }
